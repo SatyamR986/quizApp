@@ -24,7 +24,7 @@ const quizSlice = createSlice({
             const currentQuestion = state.questions[state.currentQuestionIndex];
             
             // Check if the selected option is correct
-            if (selectedOption === currentQuestion.correctAnswer) {
+            if (selectedOption === currentQuestion.answer) {
                 state.score += 1;
             }   
             // Move to next question or end quiz
