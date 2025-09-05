@@ -5,7 +5,7 @@ import { restartQuiz } from './quiz/quizSlice';
 const QuizSummary = () => {
     const dispatch = useDispatch();
 
-    const { score , questtions } = useSelector((state) => state.quiz);
+    const { score , questions} = useSelector((state) => state.quiz);
 
     const handleRestart = () => {
         dispatch(restartQuiz());
