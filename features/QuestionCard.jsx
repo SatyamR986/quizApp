@@ -11,7 +11,7 @@ const QuestionCard = () => {
         currentQuestionIndex,
     } = useSelector((state) => state.quiz);
     
-    const currenQuestion = questions[currentQuestionIndex];
+    const currentQuestion = questions[currentQuestionIndex];
 
     const handleAnswer = (option) => {
         dispatch(answerQuestion(option));
@@ -20,12 +20,12 @@ const QuestionCard = () => {
     return(
         <div className="question-card">
             <h3>Question {currentQuestionIndex + 1}</h3>
-            <p>{currenQuestion.question}</p>
+            <p>{currentQuestion.question}</p>
 
             <div className="options">
-                {currenQuestion.option.map((option, index) => (
-                    <button key = {index}
-                    onClick = {() => handleAnswer(option)}>
+                {currentQuestion.options.map((option, index) => (
+                    <button key={index}
+                    onClick={() => handleAnswer(option)}>
                         {option}
                     </button>
             ))}
