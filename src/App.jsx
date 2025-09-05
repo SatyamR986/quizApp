@@ -1,11 +1,11 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 
-import MainLayout from './components/MainLayout';
-import Header from './components/Header';
-import QuizStart from './components/QuizStart';
-import QuestionCard from './components/QuestionCard';
-import QuizSummary from './components/QuizSummary';
+import MainLayout from '../features/components/MainLayout';
+import Header from '../features/components/Header';
+import QuizStart from '../features/QuizStart';
+import QuestionCard from '../features/QuestionCard';
+import QuizSummary from '../features/QuizSummary';
 
 const App = () => {
   const { quizStarted, quizEnded } = useSelector((state) => state.quiz);
