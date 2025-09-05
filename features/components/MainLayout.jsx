@@ -2,7 +2,7 @@ import React from 'react';
 
 const MainLayout = ({ children }) => {
     return(
-        <div className="j">
+        <div className="main-container min-h-screen w-screen text-center">
             {children}
         </div>
     );
